@@ -1,4 +1,4 @@
-# 🔍 Midstalker by err0rgod
+# 🔍 Midstalker Analyzer by err0rgod
 
 > **"Every packet hides a story. I give you the tools to decode it."**
 
