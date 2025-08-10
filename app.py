@@ -667,25 +667,7 @@ def Intro():
           
           
         
-        ## Getting Started
-
-        To get started with PCAP analysis, you can use tools like Wireshark or tshark. Additionally, Python
-        libraries such as Scapy and PyShark provide programmatic access to PCAP data.
-
-        ```python
-        # Example using Scapy
-        from scapy.all import rdpcap
-
-        # Load PCAP file
-        pcap_file = "example.pcap"
-        packets = rdpcap(pcap_file)
-
-        # Analyze packets
-        for packet in packets:
-            # Perform analysis here
-            pass
-        ```
-
+        
         Explore the capabilities of PCAP analysis tools to enhance your understanding of network traffic and
         strengthen cybersecurity practices.
 
