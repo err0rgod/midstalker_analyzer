@@ -637,6 +637,15 @@ def Intro():
     # Continue with the rest of the content
     st.markdown(
         """
+        ## What is MidStalker?
+
+        MidStalker is a Networking Framework for Offensive & Deffensive approach (Red/Blue team) It helps the User from getting the network packets from the network of the all hosts and after that also 
+        able to perform more actions like DNS spoof , Vulnerebilty scanning if any bug exist it will inform you and more. But what are you seeing here on this website is the part of the Framework 
+        it helps up analyzing the captured pcap files in very interactive way, one can't imagine. more is awaited to be added on this framework if you face any issues or wanted to give a feedback you 
+        can connect with me on any of my Socials.
+
+        
+
         ## What is a PCAP file?
 
         A PCAP file (Packet Capture) is a binary file that stores network traffic data. It records the details of
