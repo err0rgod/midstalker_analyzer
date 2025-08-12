@@ -82,7 +82,7 @@ def showdata_from_id(PCAPS, dataid):
     pcap.show()
     sys.stdout = old
     show_file.close()
-    # 读取数据
+    # Read data
     with open(show_temp_name.name,'r', encoding='utf-8') as showf:
         data = showf.read()
     result = data.strip().split('###')[1:]

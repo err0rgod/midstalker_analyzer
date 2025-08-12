@@ -9,7 +9,7 @@ import os
 import re
 import binascii
 
-#web文件
+# Extract files transferred over HTTP (downloads/uploads)
 def web_file(PCAPS, host_ip, folder):
     web_list = list()
     webdata = web_data(PCAPS, host_ip)
@@ -58,14 +58,14 @@ def web_file(PCAPS, host_ip, folder):
     return web_list
 
 
-#ftp文件
+# Extract files transferred over FTP
 def ftp_file(PCAPS, host_ip, folder):
     ftp_list = list()
     ftp_cmd_data = telnet_ftp_data(PCAPS, host_ip, 21)
     port_file_list = list()
     for ftp_cmd in ftp_cmd_data:
         cmd_data = ftp_cmd['data']
-        if "PASV" in cmd_data:  #PASV模式,通过Web浏览器访问模式
+        if "PASV" in cmd_data:  # PASV mode (passive FTP via browser)
             pattern_pasv = re.compile(r'PASV(.*?)RETR(.*?)150', re.S)
             result = pattern_pasv.findall(cmd_data)
             if not result:
@@ -93,7 +93,7 @@ def ftp_file(PCAPS, host_ip, folder):
                     f.write(ftp['raw_data'])
                 count += 1
                 ftp_list.append({'ip_port':ftp['ip_port'].split(':')[0] + ':' + ftp['ip_port'].split(':')[1], 'filename':folder+file_name, 'size':'%.2f'%(os.path.getsize(folder+file_name)/1024.0)})
-        elif 'PORT' in cmd_data:  #PORT模式,通过终端访问模式
+        elif 'PORT' in cmd_data:  # PORT mode (active FTP via terminal)
             pattern_port = re.compile(r'PORT(.*?)(RETR|STOR)(.*?)150', re.S)
             result = pattern_port.findall(cmd_data)
             for port, pattern, file in result:
@@ -111,14 +111,14 @@ def ftp_file(PCAPS, host_ip, folder):
             pass
     return ftp_list
 
-#填充不符合规范的base64数据
+# Pad malformed base64 data to valid length
 def base64padding(data):
     missing_padding = 4 - len(data) % 4
     if missing_padding:
         data += '='* missing_padding
     return data
 
-#mail文件
+# Extract files/attachments from email protocols (SMTP/POP3/IMAP)
 def mail_file(PCAPS, host_ip, folder):
     filename_p = re.compile(r'filename="(.*?)"', re.S)
     charset = 'UTF-8'
@@ -168,7 +168,7 @@ def mail_file(PCAPS, host_ip, folder):
             mail_list.append({'ip_port':filename.split('_')[0]+':'+filename.split('_')[1], 'filename':folder+filename, 'size':'%.2f'%(os.path.getsize(folder+filename)/1024.0)})
     return mail_list
 
-#所有二进制文件
+# Extract all binary files found via magic headers from any payload
 def all_files(PCAPS, folder):
     file_header = dict()
     with open('./app/utils/protocol/FILES', 'r', encoding='UTF-8') as f:

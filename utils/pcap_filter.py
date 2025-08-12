@@ -8,7 +8,7 @@ import sys
 
 def get_all_pcap(PCAPS, PD):
     '''
-    对于pcap文件进行文件处理，返回字典格式
+    Process pcap packets and return an ordered mapping for display
     '''
     pcaps = collections.OrderedDict()
     for count, i in enumerate(PCAPS, 1):
@@ -18,7 +18,7 @@ def get_all_pcap(PCAPS, PD):
 
 def get_filter_pcap(PCAPS, PD, key, value):
     '''
-    将具体的协议进行筛选返回
+    Filter packets by a specific key/value (e.g., protocol/source/destination)
     '''
     pcaps = collections.OrderedDict()
     count = 1
@@ -40,14 +40,14 @@ def get_filter_pcap(PCAPS, PD, key, value):
                 count += 1
         else:
             pass
-    # 将pcap筛选后记录按序返回
+    # Return filtered pcaps in order
     return pcaps
 
 
 def proto_filter(filter_type, value, PCAPS, PD):
     '''
-    协议过滤，根据选择挑选出正确的协议显示
-    可以根据"起始地址：端口","目的地址：端口","协议"筛选
+    Protocol filtering based on selection
+    Can filter by "source", "destination" or "protocol"
     '''
     if filter_type == u'all':
         pcaps = get_all_pcap(PCAPS, PD)
@@ -70,7 +70,7 @@ def proto_filter(filter_type, value, PCAPS, PD):
 
 def showdata_from_id(PCAPS, dataid):
     pcap = PCAPS[dataid]
-    # 输出重定向数据
+    # Redirect output to capture pcap.show()
     show_temp_name = tempfile.NamedTemporaryFile(prefix='show_', dir='/tmp')
     old = sys.stdout
     show_file = open(show_temp_name.name, 'w')
@@ -78,7 +78,7 @@ def showdata_from_id(PCAPS, dataid):
     pcap.show()
     sys.stdout = old
     show_file.close()
-    # 读取数据
+    # Read data
     with open(show_temp_name.name, 'r') as showf:
         data = showf.read()
     result = data.strip().split('###')[1:]

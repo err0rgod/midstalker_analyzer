@@ -4,7 +4,7 @@ __author__ = 'dj'
 from scapy.all import *
 import collections
 
-#数据包大小统计
+# Packet length distribution statistics
 def pcap_len_statistic(PCAPS):
     pcap_len_dict = {'0-300':0, '301-600':0, '601-900':0, '901-1200':0, '1201-1500':0}
     for pcap in PCAPS:
@@ -23,7 +23,7 @@ def pcap_len_statistic(PCAPS):
             pass
     return pcap_len_dict
 
-#常见协议统计IP,IPv6,TCP,UDP,ARP,ICMP,DNS,HTTP,HTTPS,Other
+# Common protocol counts: IP, IPv6, TCP, UDP, ARP, ICMP, DNS, HTTP, HTTPS, Others
 def common_proto_statistic(PCAPS):
     common_proto_dict = collections.OrderedDict()
     common_proto_dict['IP'] = 0
@@ -75,7 +75,7 @@ def common_proto_statistic(PCAPS):
             common_proto_dict['Others'] += 1
     return common_proto_dict
 
-#最多协议数量统计
+# Top protocols by count
 def most_proto_statistic(PCAPS, PD):
     protos_list = list()
     for pcap in PCAPS:
@@ -84,7 +84,7 @@ def most_proto_statistic(PCAPS, PD):
     most_count_dict = collections.OrderedDict(collections.Counter(protos_list).most_common(10))
     return most_count_dict
 
-#http/https协议统计
+# HTTP/HTTPS statistics by IP
 def http_statistic(PCAPS):
     http_dict = dict()
     for pcap in PCAPS:
@@ -104,7 +104,7 @@ def http_statistic(PCAPS):
                     http_dict[ip] = 1
     return http_dict
 
-#DNS协议统计
+# DNS query statistics
 def dns_statistic(PCAPS):
     dns_dict = dict()
     for pcap in PCAPS:

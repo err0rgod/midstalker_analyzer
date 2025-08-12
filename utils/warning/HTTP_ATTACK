@@ -1,4 +1,4 @@
-@variable : SQL注入攻击
+﻿@variable : SQL注入攻击
 ,@variable : SQL注入攻击
 PRINT : SQL注入攻击
 PRINT @@variable : SQL注入攻击
