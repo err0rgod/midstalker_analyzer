@@ -1,10 +1,12 @@
 # Midstalker Analyzer
-
-Midstalker Analyzer is a lightweight analysis tool designed to process and inspect data efficiently through an interactive interface. It is built with a focus on simplicity, local execution, and ease of use, allowing users to work with their data without relying on heavy cloud infrastructure.
+Midstalker Analyzer is a Streamlit-based tool for analyzing [TYPE OF DATA — logs, traces, etc.] and extracting structured insights through a simple interface. It is built with a focus on simplicity, local execution, and ease of use, allowing users to work with their data without relying on heavy cloud infrastructure.
 
 The application can be run locally using Docker for full control and performance, or accessed directly through the hosted Streamlit version.
 
 ---
+## Why this project
+
+This project was built to avoid limitations of hosted tools such as file size restrictions and slow processing speeds. Running locally ensures better performance and full control over data.
 
 ## Features
 
@@ -15,6 +17,9 @@ The application can be run locally using Docker for full control and performance
 * Clean and modular codebase
 
 ---
+## Preview
+
+![App Screenshot](./assets/app.png)
 
 ## Getting Started
 
@@ -33,6 +38,11 @@ Running the application locally removes file size limits and improves performanc
 
 * Docker installed on your system
 * Git (optional, for cloning the repository)
+
+## Quick Start
+
+docker build -t midstalker .
+docker run -p 8501:8501 midstalker
 
 ### Steps
 
@@ -66,6 +76,8 @@ http://localhost:8501
 ## Running via Web (Streamlit)
 
 If you do not want to set up Docker, you can use the hosted version:
+The hosted version is suitable for quick testing and small inputs.
+For larger datasets or better performance, local Docker execution is recommended.
 
 https://mid-stalker-analyzer.streamlit.app
 
@@ -76,15 +88,13 @@ Note: The hosted version may have limitations on file size and processing speed.
 ## Project Structure
 
 ```
-midstalker_analyzer/
-├── app.py
-├── utils/
-├── requirements.txt
-├── Dockerfile
-├── .dockerignore
-└── notebooks/ (development only)
-```
+app.py           main application entry point  
+utils/           helper modules  
+requirements.txt dependencies  
+Dockerfile       container setup  
 
+```
+For more info this project does have a documentation so you can check that out.
 ---
 
 ## Development

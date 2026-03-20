@@ -1,11 +1,4 @@
 #  Midstalker Analyzer - Complete Code Documentation
-
-> **"Every packet hides a story. I give you the tools to decode it."**
-
-**Developer:** err0rgod (Nirbhay Katiyar)  
-**Version:** 2.0  
-**Type:** PCAP Analysis Tool for Cybersecurity
-
 ---
 
 ##  **Project Structure Overview**
@@ -16,7 +9,7 @@ Midstalker analyzer/
 ├── main.py                   # Test/development script not in use right now (140 lines)
 ├── requirements.txt          # Python dependencies (11 packages)
 ├── README.md                 # Project documentation (216 lines)
-├── JupyterNotebook.ipynb     # Analysis notebook only for test abhi to koi kaam nhi hai uska (442 lines)
+├── JupyterNotebook.ipynb     # Analysis notebook only for test no need in the core engine (442 lines)
 ├── sample.pcap              # Sample PCAP file for testing
 ├── ftp-data.pcap            # FTP traffic sample
 ├── ftp3.pcap                # FTP session sample
