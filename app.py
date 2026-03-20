@@ -501,7 +501,7 @@ def page_file_upload():
         # File upload with better description
         st.markdown("### Upload PCAP File")
         st.markdown("Please upload a PCAP (Packet Capture) file for analysis. Supported formats: `.pcap`, `.cap`")
-        st.info("ℹ️ If you run this app locally, there is no hard 200MB limit from Streamlit. The only limits are your machine RAM and CPU. (Streamlit Cloud may enforce 200MB per file.)")
+        st.info("If you run this app locally, there is no hard 200MB limit from Streamlit. The only limits are your machine RAM and CPU. (Streamlit Cloud may enforce 200MB per file.)")
         
         uploaded_file = st.file_uploader(
             "Choose a PCAP file", 
