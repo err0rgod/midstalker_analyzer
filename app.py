@@ -501,6 +501,7 @@ def page_file_upload():
         # File upload with better description
         st.markdown("### Upload PCAP File")
         st.markdown("Please upload a PCAP (Packet Capture) file for analysis. Supported formats: `.pcap`, `.cap`")
+        st.info("ℹ️ If you run this app locally, there is no hard 200MB limit from Streamlit. The only limits are your machine RAM and CPU. (Streamlit Cloud may enforce 200MB per file.)")
         
         uploaded_file = st.file_uploader(
             "Choose a PCAP file", 
@@ -578,11 +579,9 @@ def Intro():
     st.markdown(
         """
         ## About Me  
-        I'm **err0rgod** — 10x Dev | IoT Hacker | Malware Dev | Red Teamer | Python/C/C++ (Embedded) | AI/ML | IoT | Robotics | OSINT | Hardware Hacking | Network Exploitation.  
+        I'm **Nirbhay Katiyar**, a passionate programmer and cybersecurity enthusiast. Focused on interconnecting hardware and software with secure coding practices. I love exploring the depths of technology and sharing my knowledge with the community.
 
-        Electronics and cybersecurity are my playground. I create high-impact, hacker-grade tools like **Fliper**, **Hackwire**, **BadUSB**, **Exifer**, and **SubEnum** — blending hardware hacking, malware development, AI/ML, and network exploitation into projects that push boundaries.  
-
-        This PCAP Analyzer is part of my mission to craft **next-gen offensive and defensive cybersecurity frameworks** — tools built for red teamers, researchers, and anyone who wants to see the raw truth hidden inside packets.  
+        This is midstalker analyzer , a sub part of midstalker project  focues on analyzing the captured pcap files in very interactive way, one can't imagine. more is awaited to be added on this framework if you face any issues or wanted to give a feedback you can connect with me on any of my Socials.
 
         [**GitHub**](https://github.com/err0rgod) — where my experiments turn into weapons-grade tools.  
          
