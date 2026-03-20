@@ -123,7 +123,7 @@ Focused on secure coding practices. Interests in Electronics , Cybersecurity & D
 - [**Medium**](https://err0rgod.medium.com/) 
 - [**Weekly Zeroday**](https://hack2rank.com/) -  A Weekly Newsletter on topics related with Tech. 
 - [**LinkedIn**](https://www.linkedin.com/in/nirbhay-katiyar-904b86358/) 
-- [**Instagram**](https://www.instagram.com/err0rgod) - Personal brand
+- [**Instagram**](https://www.instagram.com/err0rgod) 
 ## License
 
 This project is open-source and available under the MIT License.
