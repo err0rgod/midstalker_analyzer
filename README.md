@@ -20,6 +20,7 @@ This project was built to avoid limitations of hosted tools such as file size re
 ## Preview
 
 ![App Screenshot](./assets/app.png)
+![App Screenshot](./assets/app2.png)
 
 ## Getting Started
 
