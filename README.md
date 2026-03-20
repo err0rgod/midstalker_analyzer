@@ -112,6 +112,18 @@ Contributions are welcome. If you find an issue or want to improve the project, 
 
 ---
 
+##  About the Developer
+
+**err0rgod** (Nirbhay Katiyar) - Passionate Mechatronics Engineer & Developer practicing secure coding and interconnecting hardware and software.
+
+Focused on secure coding practices. Interests in Electronics , Cybersecurity & Developement. Building ***Midstalker*** a MITM framework focuses on enhancing user security and traditional security in Networks.
+
+### Connect with err0rgod
+- [**GitHub**](https://github.com/err0rgod) 
+- [**Medium**](https://err0rgod.medium.com/) 
+- [**Weekly Zeroday**](https://hack2rank.com/) -  A Weekly Newsletter on topics related with Tech. 
+- [**LinkedIn**](https://www.linkedin.com/in/nirbhay-katiyar-904b86358/) 
+- [**Instagram**](https://www.instagram.com/err0rgod) - Personal brand
 ## License
 
 This project is open-source and available under the MIT License.
