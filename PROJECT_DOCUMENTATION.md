@@ -1,4 +1,4 @@
-# 🔍 Midstalker Analyzer - Complete Code Documentation
+#  Midstalker Analyzer - Complete Code Documentation
 
 > **"Every packet hides a story. I give you the tools to decode it."**
 
@@ -8,7 +8,7 @@
 
 ---
 
-## 📁 **Project Structure Overview**
+##  **Project Structure Overview**
 
 ```
 Midstalker analyzer/
@@ -39,7 +39,7 @@ Midstalker analyzer/
 
 ---
 
-## 🗂️ **Core Files Documentation**
+## ️ **Core Files Documentation**
 
 ### **1. app.py** (Main Application)
 **Purpose:** Streamlit web interface for PCAP analysis  
@@ -211,29 +211,29 @@ Midstalker analyzer/
 
 ---
 
-## 📊 **Data Flow Architecture**
+##  **Data Flow Architecture**
 
 ```
 PCAP File Upload
-       ↓
+       
    pcap_decode.py (Packet Parsing)
-       ↓
+       
    data_extract.py (Data Extraction)
-       ↓
+       
    proto_analyzer.py (Statistics)
-       ↓
+       
    flow_analyzer.py (Traffic Analysis)
-       ↓
+       
    except_info.py (Security Analysis)
-       ↓
+       
    ipmap_tools.py (Geographic Mapping)
-       ↓
+       
    app.py (Visualization & UI)
 ```
 
 ---
 
-## 🔧 **Dependencies** (requirements.txt)
+##  **Dependencies** (requirements.txt)
 
 | Package | Purpose |
 |---------|---------|
@@ -251,51 +251,51 @@ PCAP File Upload
 
 ---
 
-## 🎯 **Key Features Summary**
+##  **Key Features Summary**
 
 ### **Core Capabilities**
-- ✅ Multi-protocol packet analysis
-- ✅ Real-time data processing
-- ✅ Advanced filtering system
-- ✅ Security threat detection
-- ✅ Geographic IP mapping
-- ✅ File reconstruction
-- ✅ Interactive visualizations
+-  Multi-protocol packet analysis
+-  Real-time data processing
+-  Advanced filtering system
+-  Security threat detection
+-  Geographic IP mapping
+-  File reconstruction
+-  Interactive visualizations
 
 ### **Protocol Support**
-- ✅ Ethernet, IP, IPv6
-- ✅ TCP, UDP, ARP, ICMP
-- ✅ DNS, HTTP, HTTPS
-- ✅ FTP, Telnet, SMTP, POP3, IMAP
+-  Ethernet, IP, IPv6
+-  TCP, UDP, ARP, ICMP
+-  DNS, HTTP, HTTPS
+-  FTP, Telnet, SMTP, POP3, IMAP
 
 ### **Security Features**
-- ✅ Attack pattern detection
-- ✅ Brute force identification
-- ✅ Suspicious port warnings
-- ✅ Malware traffic analysis
+-  Attack pattern detection
+-  Brute force identification
+-  Suspicious port warnings
+-  Malware traffic analysis
 
 ### **Visualization**
-- ✅ Interactive charts (Plotly, ECharts)
-- ✅ Geographic maps (Folium)
-- ✅ Statistical summaries
-- ✅ Real-time dashboards
+-  Interactive charts (Plotly, ECharts)
+-  Geographic maps (Folium)
+-  Statistical summaries
+-  Real-time dashboards
 
 ---
 
-## 🚀 **Usage Workflow**
+##  **Usage Workflow**
 
-1. **Upload PCAP** → `app.py` (page_file_upload)
-2. **Parse Packets** → `pcap_decode.py` (ether_decode)
-3. **Extract Data** → `data_extract.py` (web_data, mail_data)
-4. **Analyze Traffic** → `flow_analyzer.py` (time_flow, data_flow)
-5. **Generate Stats** → `proto_analyzer.py` (common_proto_statistic)
-6. **Detect Threats** → `except_info.py` (web_warning, port_warning)
-7. **Map Locations** → `ipmap_tools.py` (get_ipmap)
-8. **Visualize Results** → `app.py` (various chart functions)
+1. **Upload PCAP**  `app.py` (page_file_upload)
+2. **Parse Packets**  `pcap_decode.py` (ether_decode)
+3. **Extract Data**  `data_extract.py` (web_data, mail_data)
+4. **Analyze Traffic**  `flow_analyzer.py` (time_flow, data_flow)
+5. **Generate Stats**  `proto_analyzer.py` (common_proto_statistic)
+6. **Detect Threats**  `except_info.py` (web_warning, port_warning)
+7. **Map Locations**  `ipmap_tools.py` (get_ipmap)
+8. **Visualize Results**  `app.py` (various chart functions)
 
 ---
 
-## 🛡️ **Security & Privacy**
+## ️ **Security & Privacy**
 
 - **Local Processing**: All analysis done locally
 - **No Data Transmission**: PCAP files not sent to external servers
@@ -304,7 +304,7 @@ PCAP File Upload
 
 ---
 
-## 📈 **Performance Metrics**
+##  **Performance Metrics**
 
 - **File Size Support**: Up to several GB PCAP files
 - **Processing Speed**: Real-time packet analysis
@@ -313,7 +313,7 @@ PCAP File Upload
 
 ---
 
-## 🔄 **Development Status**
+##  **Development Status**
 
 - **Version**: 2.0 (Enhanced by err0rgod)
 - **Status**: Production Ready
@@ -322,6 +322,6 @@ PCAP File Upload
 
 ---
 
-**Built with ❤️ by err0rgod for the cybersecurity community**
+**Built with ️ by err0rgod for the cybersecurity community**
 
 *"In the world of cybersecurity, knowledge is power, and packets are the truth."*

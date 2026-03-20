@@ -1,4 +1,4 @@
-# 🔍 Midstalker Analyzer by err0rgod
+#  Midstalker Analyzer by err0rgod
 
 > **"Every packet hides a story. I give you the tools to decode it."**
 
@@ -9,9 +9,9 @@
 
 A **weapons-grade** PCAP (Packet Capture) analysis tool built for red teamers, cybersecurity researchers, and network analysts. This enhanced version provides comprehensive network traffic analysis with advanced visualization, geographic mapping, and security threat detection.
 
-## 🌟 Features
+##  Features
 
-### 🔥 Core Capabilities
+###  Core Capabilities
 - **Multi-Protocol Support**: Ethernet, IP, IPv6, TCP, UDP, ARP, ICMP, DNS, HTTP, HTTPS
 - **Real-time Analysis**: Live packet processing and visualization
 - **Geographic Mapping**: IP geolocation with interactive maps
@@ -19,20 +19,20 @@ A **weapons-grade** PCAP (Packet Capture) analysis tool built for red teamers, c
 - **Advanced Filtering**: Protocol, source, destination, and packet length filtering
 - **Data Extraction**: HTTP, SMTP, POP3, IMAP, FTP, Telnet data reconstruction
 
-### 📊 Analytics & Visualization
+###  Analytics & Visualization
 - **Protocol Statistics**: Comprehensive protocol distribution analysis
 - **Traffic Flow Analysis**: Time-based traffic patterns and flow direction
 - **Packet Length Distribution**: Statistical analysis of packet sizes
 - **Interactive Charts**: Plotly, ECharts, and Folium-based visualizations
 - **Geographic Analysis**: IP location mapping with traffic visualization
 
-### 🛡️ Security Features
+### ️ Security Features
 - **Attack Pattern Detection**: SQL injection, XSS, OS command injection signatures
 - **Anomaly Detection**: Suspicious port activity and traffic patterns
 - **Brute Force Detection**: Login failure analysis and attack identification
 - **Malware Indicators**: Trojan and virus detection based on traffic patterns
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -60,7 +60,7 @@ A **weapons-grade** PCAP (Packet Capture) analysis tool built for red teamers, c
 4. **Open your browser**
    Navigate to `http://localhost:8501`
 
-## 📖 Usage Guide
+##  Usage Guide
 
 ### 1. **Upload PCAP File**
 - Go to the "Upload File" section
@@ -84,7 +84,7 @@ A **weapons-grade** PCAP (Packet Capture) analysis tool built for red teamers, c
 - View geographic distribution of network traffic
 - Analyze global traffic patterns and connections
 
-## 🛠️ Technical Architecture
+## ️ Technical Architecture
 
 ### Core Components
 ```
@@ -108,7 +108,7 @@ PCAP-Analyzer/
 - **Better UI/UX**: Enhanced user interface with clear navigation
 - **Comprehensive Logging**: Detailed error messages and debugging info
 
-## 🔧 Dependencies
+##  Dependencies
 
 | Package | Version | Purpose |
 |---------|---------|---------|
@@ -120,33 +120,33 @@ PCAP-Analyzer/
 | `numpy` | Latest | Numerical computations |
 | `pandas` | Latest | Data manipulation |
 
-## 🎯 Use Cases
+##  Use Cases
 
-### 🔍 Network Forensics
+###  Network Forensics
 - Investigate security incidents
 - Analyze network breaches
 - Reconstruct attack timelines
 - Identify compromised systems
 
-### 🛡️ Security Research
+### ️ Security Research
 - Malware traffic analysis
 - Attack pattern recognition
 - Network vulnerability assessment
 - Threat intelligence gathering
 
-### 📊 Network Monitoring
+###  Network Monitoring
 - Traffic pattern analysis
 - Performance optimization
 - Bandwidth utilization
 - Protocol distribution
 
-### 🎓 Educational
+###  Educational
 - Network protocol learning
 - Cybersecurity training
 - Packet analysis practice
 - Security tool development
 
-## 🌐 About the Developer
+##  About the Developer
 
 **err0rgod** (Nirbhay Katiyar) - *10x Dev | IoT Hacker | Malware Dev | Red Teamer*
 
@@ -158,30 +158,30 @@ Electronics and cybersecurity enthusiast who creates high-impact, hacker-grade t
 - [**LinkedIn**](https://www.linkedin.com/in/nirbhay-katiyar-904b86358/) - Professional networking
 - [**Instagram**](https://www.instagram.com/err0rgod) - Personal brand
 
-## 📝 Sample Data
+##  Sample Data
 
 The repository includes sample PCAP files for testing:
 - `sample.pcap` - General network traffic
 - `ftp-data.pcap` - FTP protocol analysis
 - `ftp3.pcap` - FTP session data
 
-## 🔄 Version History
+##  Version History
 
 ### v2.0 (Current) - Enhanced by err0rgod
-- ✅ Translated all Chinese comments to English
-- ✅ Improved code documentation and structure
-- ✅ Enhanced error handling and validation
-- ✅ Added comprehensive protocol support
-- ✅ Updated UI/UX with better navigation
-- ✅ Added social media integration
-- ✅ Improved file upload functionality
+-  Translated all Chinese comments to English
+-  Improved code documentation and structure
+-  Enhanced error handling and validation
+-  Added comprehensive protocol support
+-  Updated UI/UX with better navigation
+-  Added social media integration
+-  Improved file upload functionality
 
 ### v1.0 (Original) - by dj
 - Basic PCAP analysis functionality
 - Chinese language interface
 - Core packet decoding capabilities
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
@@ -192,11 +192,11 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Original Author**: dj (Chinese developer) - for the foundational PCAP analysis framework
 - **Python Community**: For the excellent libraries and tools
@@ -204,12 +204,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Scapy Developers**: For the powerful packet manipulation library
 - **Cybersecurity Community**: For continuous inspiration and feedback
 
-## ⚠️ Disclaimer
+## ️ Disclaimer
 
 This tool is designed for **legitimate cybersecurity research, network analysis, and educational purposes only**. Users are responsible for ensuring compliance with applicable laws and regulations. The developers are not responsible for any misuse of this software.
 
 ---
 
-**Built with ❤️ by err0rgod for the cybersecurity community**
+**Built with ️ by err0rgod for the cybersecurity community**
 
 *"In the world of cybersecurity, knowledge is power, and packets are the truth."*

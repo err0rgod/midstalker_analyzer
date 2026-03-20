@@ -513,17 +513,17 @@ def page_file_upload():
         st.session_state.uploaded_file = uploaded_file
 
         if uploaded_file is not None:
-            st.success(f"✅ File uploaded successfully: **{uploaded_file.name}**")
-            st.info(f"📁 File size: {uploaded_file.size:,} bytes")
+            st.success(f" File uploaded successfully: **{uploaded_file.name}**")
+            st.info(f" File size: {uploaded_file.size:,} bytes")
             
             # Validate file type
             if uploaded_file.name.endswith(('.pcap', '.cap')):
-                st.success("✅ Valid PCAP file format detected")
+                st.success(" Valid PCAP file format detected")
             else:
-                st.warning("⚠️ File extension not recognized as PCAP format")
+                st.warning("️ File extension not recognized as PCAP format")
     else:
         # Display existing file info
-        st.info("📁 **Current uploaded file:**")
+        st.info(" **Current uploaded file:**")
         st.write(f"**File Name:** {st.session_state.uploaded_file.name}")
         st.write(f"**File Size:** {st.session_state.uploaded_file.size:,} bytes")
         st.write(f"**File Type:** {st.session_state.uploaded_file.type}")
@@ -531,14 +531,14 @@ def page_file_upload():
         # Option to delete existing file and upload a new one
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("🗑️ Delete Current File"):
+            if st.button("️ Delete Current File"):
                 st.session_state.uploaded_file = None
                 st.session_state.pcap_data = None
                 st.success("File deleted successfully. Please upload a new file.")
                 st.rerun()
         
         with col2:
-            if st.button("🔄 Upload New File"):
+            if st.button(" Upload New File"):
                 st.session_state.uploaded_file = None
                 st.session_state.pcap_data = None
                 st.success("Ready to upload new file.")
@@ -548,7 +548,7 @@ def page_file_upload():
 def page_display_info():
     # Display uploaded file information
     if st.session_state.get("uploaded_file") is not None:
-        st.markdown("### 📊 File Information")
+        st.markdown("###  File Information")
         
         # Create a nice display of file details
         col1, col2, col3 = st.columns(3)
@@ -563,7 +563,7 @@ def page_display_info():
             st.metric("File Type", st.session_state.uploaded_file.type)
         
         # Show file details in an expander
-        with st.expander("📋 Detailed File Information"):
+        with st.expander(" Detailed File Information"):
             file_details = {
                 "File Name": st.session_state.uploaded_file.name,
                 "File Type": st.session_state.uploaded_file.type,
@@ -592,7 +592,7 @@ def Intro():
         
         
         
-        ### 🌐 Connect with Me
+        ###  Connect with Me
         """
     )
     
@@ -677,8 +677,8 @@ def Intro():
 def RawDataView():
     # Check if a file has been uploaded
     if "uploaded_file" not in st.session_state or st.session_state.uploaded_file is None:
-        st.warning("⚠️ **No file uploaded!** Please go to the 'Upload File' section and upload a PCAP file first.")
-        st.info("📁 After uploading a file, you can view and filter the raw packet data here.")
+        st.warning("️ **No file uploaded!** Please go to the 'Upload File' section and upload a PCAP file first.")
+        st.info(" After uploading a file, you can view and filter the raw packet data here.")
         return
     
     uploaded_file = st.session_state.uploaded_file
@@ -709,14 +709,14 @@ def RawDataView():
                 start_time, end_time, live_time_duration, live_time_duration_str = calculate_live_time(pcap_data)
                 
                 # Show success message with packet count
-                st.success(f"✅ **File processed successfully!** Found {len(pcap_data)} packets in the PCAP file.")
-                st.info(f"📊 **Analysis Summary:**")
+                st.success(f" **File processed successfully!** Found {len(pcap_data)} packets in the PCAP file.")
+                st.info(f" **Analysis Summary:**")
                 st.info(f"   • Total packets: {len(pcap_data):,}")
                 st.info(f"   • Time duration: {live_time_duration_str}")
                 st.info(f"   • File size: {uploaded_file.size:,} bytes")
                 
             except Exception as e:
-                st.error(f"❌ **Error processing PCAP file:** {str(e)}")
+                st.error(f" **Error processing PCAP file:** {str(e)}")
                 st.error("Please make sure you uploaded a valid PCAP file.")
                 return
 
@@ -728,7 +728,7 @@ def RawDataView():
             st.sidebar.header("P1ease Filter Here:")
             # st.sidebar.divider()
             # Filter reset button
-            if st.sidebar.button("🔄 Reset All Filters"):
+            if st.sidebar.button(" Reset All Filters"):
                 # Clear session state for filters
                 if 'filter_protocols' in st.session_state:
                     del st.session_state.filter_protocols
@@ -738,7 +738,7 @@ def RawDataView():
                     del st.session_state.filter_source
                 if 'filter_destination' in st.session_state:
                     del st.session_state.filter_destination
-                st.success("✅ All filters have been reset!")
+                st.success(" All filters have been reset!")
                 st.rerun()
             # Multiselect for filtering by protocol
             selected_protocols = st.sidebar.multiselect(
@@ -1117,7 +1117,7 @@ def DrawFoliumMap(data):
     folium_static(m,width=1820 , height=600)
 
 def main():
-    st.set_page_config(page_title="PCAP Analyzer by err0rgod", page_icon="🔍", layout="wide")
+    st.set_page_config(page_title="PCAP Analyzer by err0rgod", page_icon="", layout="wide")
     # download from Bootstrap
     selected = option_menu(
         menu_title=None,
@@ -1145,16 +1145,16 @@ def main():
         RawDataView()
 
     if selected == "Analysis":
-        st.subheader("📊 Analysis Dashboard")
+        st.subheader(" Analysis Dashboard")
         
         # Check if a file has been uploaded and processed
         if "uploaded_file" not in st.session_state or st.session_state.uploaded_file is None:
-            st.warning("⚠️ **No file uploaded!** Please go to the 'Upload File' section and upload a PCAP file first.")
-            st.info("📁 After uploading a file, you can view the raw data in 'Raw Data & Filtering' section, then return here for analysis.")
+            st.warning("️ **No file uploaded!** Please go to the 'Upload File' section and upload a PCAP file first.")
+            st.info(" After uploading a file, you can view the raw data in 'Raw Data & Filtering' section, then return here for analysis.")
             return
         
         if "pcap_data" not in st.session_state or st.session_state.pcap_data is None:
-            st.warning("⚠️ **File not processed!** Please go to the 'Raw Data & Filtering' section to process your uploaded file first.")
+            st.warning("️ **File not processed!** Please go to the 'Raw Data & Filtering' section to process your uploaded file first.")
             return
         
         # get analysis of data
@@ -1347,35 +1347,35 @@ def main():
 
 
     if selected == "Geoplots":
-        st.subheader("🌍 Geographic Analysis")
+        st.subheader(" Geographic Analysis")
         
         # Check if a file has been uploaded and processed
         if "uploaded_file" not in st.session_state or st.session_state.uploaded_file is None:
-            st.warning("⚠️ **No file uploaded!** Please go to the 'Upload File' section and upload a PCAP file first.")
+            st.warning("️ **No file uploaded!** Please go to the 'Upload File' section and upload a PCAP file first.")
             return
         
         if "pcap_data" not in st.session_state or st.session_state.pcap_data is None:
-            st.warning("⚠️ **File not processed!** Please go to the 'Raw Data & Filtering' section to process your uploaded file first.")
+            st.warning("️ **File not processed!** Please go to the 'Raw Data & Filtering' section to process your uploaded file first.")
             return
         
         data_of_pcap = st.session_state.pcap_data
         if data_of_pcap is None or len(data_of_pcap) == 0:
-            st.warning("⚠️ **No valid data for geographic analysis.** Please ensure your PCAP file contains IP traffic data.")
+            st.warning("️ **No valid data for geographic analysis.** Please ensure your PCAP file contains IP traffic data.")
             return
         
         try:
-            st.info("🗺️ **Generating geographic map from IP addresses...**")
+            st.info("️ **Generating geographic map from IP addresses...**")
             ipmap_result = ipmap(data_of_pcap)
             
             if ipmap_result is not None and len(ipmap_result) > 0:
-                st.success(f"✅ **Map generated successfully!** Found {len(ipmap_result)} IP locations to display.")
+                st.success(f" **Map generated successfully!** Found {len(ipmap_result)} IP locations to display.")
                 # Display the map in Streamlit
                 DrawFoliumMap(ipmap_result)
             else:
-                st.warning("⚠️ **No geographic data found.** The PCAP file may not contain public IP addresses or the GeoIP database may not have location data for the IPs.")
+                st.warning("️ **No geographic data found.** The PCAP file may not contain public IP addresses or the GeoIP database may not have location data for the IPs.")
         except Exception as e:
-            st.error(f"❌ **Error generating geographic map:** {str(e)}")
-            st.info("💡 **Tip:** Make sure the GeoIP database file is present in the utils/GeoIP/ directory.")
+            st.error(f" **Error generating geographic map:** {str(e)}")
+            st.info(" **Tip:** Make sure the GeoIP database file is present in the utils/GeoIP/ directory.")
 
 
 
